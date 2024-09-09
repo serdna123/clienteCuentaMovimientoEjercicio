@@ -33,6 +33,8 @@ Para desplegar los microservicios y RabbitMQ en contenedores Docker:
 Clona el repositorio:
 
 https://github.com/serdna123/clienteCuentaMovimientoEjercicio.git
+
+
 cd tu-repositorio
 Asegúrate de tener Docker y Docker Compose instalados.
 
