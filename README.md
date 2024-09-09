@@ -30,16 +30,12 @@ Para desplegar los microservicios y RabbitMQ en contenedores Docker:
 
 Clona el repositorio:
 
-bash
-Copy code
 https://github.com/serdna123/clienteCuentaMovimientoEjercicio.git
 cd tu-repositorio
 Asegúrate de tener Docker y Docker Compose instalados.
 
 Ejecuta Docker Compose para levantar ambos microservicios:
 
-bash
-Copy code
 docker-compose up --build
 3. Verificación de los Endpoints
 Una vez que los contenedores estén corriendo, puedes verificar los endpoints usando Postman.
