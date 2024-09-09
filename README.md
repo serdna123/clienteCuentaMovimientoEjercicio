@@ -66,6 +66,8 @@ URL base: http://localhost:8080/api/...
 El archivo docker-compose.yml configurará RabbitMQ como broker de mensajes para la comunicación entre los microservicios.
 Puedes acceder a la interfaz de RabbitMQ en http://localhost:15672/ con las credenciales predeterminadas (guest/guest).
 
-Docker Hub
+**Docker Hub
+**
 docker pull serdna1230/cuentamovimiento-service
+
 docker pull serdna1230/clientepersona-service
