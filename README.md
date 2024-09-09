@@ -13,14 +13,6 @@ Requisitos
 Docker y Docker Compose: Para ejecutar los contenedores de los microservicios y RabbitMQ.
 PostgreSQL: Para gestionar las bases de datos.
 pgAdmin o similar: Para ejecutar los scripts SQL.
-Instrucciones de Despliegue
-1. Configuración de Bases de Datos
-Crear las bases de datos necesarias en PostgreSQL:
-Base de datos para clientes y personas.
-Base de datos para cuentas y movimientos financieros.
-Ejecutar los scripts SQL proporcionados en este repositorio:
-personaCliente.sql para crear las tablas de clientes y personas.
-cuentaMovimiento.sql para crear las tablas de cuentas y movimientos financieros.
 
 Instrucciones de Despliegue
 1. Configuración de Bases de Datos
@@ -55,6 +47,7 @@ Una vez que los contenedores estén corriendo, puedes verificar los endpoints us
 Importa la colección de Postman:
 Importa el archivo EjercicioClienteCuenta.postman_collection.json en Postman.
 Verifica los endpoints disponibles en la colección.
+
 4. Configuración de los Servicios
 clientePersona-service:
 
@@ -68,6 +61,7 @@ cuentaMovimiento-service:
 Puerto: 8080
 Base de datos: cuentaMovimiento
 URL base: http://localhost:8080/api/...
+
 5. RabbitMQ
 El archivo docker-compose.yml configurará RabbitMQ como broker de mensajes para la comunicación entre los microservicios.
 Puedes acceder a la interfaz de RabbitMQ en http://localhost:15672/ con las credenciales predeterminadas (guest/guest).
