@@ -15,17 +15,18 @@ PostgreSQL: Para gestionar las bases de datos.
 pgAdmin o similar: Para ejecutar los scripts SQL.
 
 Instrucciones de Despliegue
-1. Configuración de Bases de Datos
+**1. Configuración de Bases de Datos**
 Crear las bases de datos necesarias en PostgreSQL:
 Base de datos para clientes y personas <persona_cliente_db>.
 Base de datos para cuentas y movimientos financieros<cuenta_movimiento_db>.
-Ejecutar los scripts SQL proporcionados en este repositorio:
+
+**2. Ejecutar los scripts SQL proporcionados en este repositorio:**
 personaCliente.sql para crear las tablas de clientes y personas.
 cuentaMovimiento.sql para crear las tablas de cuentas y movimientos financieros.
 
 Las tablas tambien se generan de forma automatica al momento de ejecutar los microservicios.
 
-3. Ejecución del Proyecto
+**3. Ejecución del Proyecto**
 Para desplegar los microservicios y RabbitMQ en contenedores Docker:
 
 Clona el repositorio:
@@ -37,14 +38,15 @@ Asegúrate de tener Docker y Docker Compose instalados.
 Ejecuta Docker Compose para levantar ambos microservicios:
 
 docker-compose up --build
-3. Verificación de los Endpoints
+
+**4. Verificación de los Endpoints**
 Una vez que los contenedores estén corriendo, puedes verificar los endpoints usando Postman.
 
 Importa la colección de Postman:
 Importa el archivo EjercicioClienteCuenta.postman_collection.json en Postman.
 Verifica los endpoints disponibles en la colección.
 
-4. Configuración de los Servicios
+**5. Configuración de los Servicios**
 clientePersona-service:
 
 Puerto: 8081
@@ -58,12 +60,11 @@ Puerto: 8080
 Base de datos: cuentaMovimiento
 URL base: http://localhost:8080/api/...
 
-5. RabbitMQ
+**6. RabbitMQ**
 El archivo docker-compose.yml configurará RabbitMQ como broker de mensajes para la comunicación entre los microservicios.
 Puedes acceder a la interfaz de RabbitMQ en http://localhost:15672/ con las credenciales predeterminadas (guest/guest).
 
-**Docker Hub
-**
+**Docker Hub**
 docker pull serdna1230/cuentamovimiento-service
 
 docker pull serdna1230/clientepersona-service
