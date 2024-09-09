@@ -1,4 +1,5 @@
 Proyecto Microservicios ClientePersona y CuentaMovimiento
+
 Este proyecto contiene dos microservicios separados que se encargan de gestionar la información de clientes y cuentas, así como sus movimientos financieros. La comunicación entre estos microservicios se realiza de forma asíncrona utilizando RabbitMQ.
 
 Contenido del Repositorio
@@ -39,7 +40,7 @@ Clona el repositorio:
 
 bash
 Copy code
-git clone https://github.com/tu-usuario/tu-repositorio.git
+https://github.com/serdna123/clienteCuentaMovimientoEjercicio.git
 cd tu-repositorio
 Asegúrate de tener Docker y Docker Compose instalados.
 
