@@ -15,6 +15,7 @@ PostgreSQL: Para gestionar las bases de datos.
 pgAdmin o similar: Para ejecutar los scripts SQL.
 
 Instrucciones de Despliegue
+
 **1. Configuración de Bases de Datos**
 Crear las bases de datos necesarias en PostgreSQL:
 Base de datos para clientes y personas <persona_cliente_db>.
