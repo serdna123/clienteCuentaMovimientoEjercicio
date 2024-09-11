@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -51,7 +50,8 @@ public class ReporteController {
             cuentaDetalles.put("numeroCuenta", cuenta.getNumeroCuenta());
             cuentaDetalles.put("saldoActual", cuenta.getSaldoInicial());
             cuentaDetalles.put("tipo", cuenta.getTipoCuenta());
-
+            cuentaDetalles.put("nombreCliente", cuenta.getNombreCliente());
+            
             // Obtener los movimientos de la cuenta en el rango de fechas
             List<Movimiento> movimientos = movimientoRepository.findByCuentaIdAndFechaBetween(
                 cuenta.getId(), fechaInicio, fechaFin);

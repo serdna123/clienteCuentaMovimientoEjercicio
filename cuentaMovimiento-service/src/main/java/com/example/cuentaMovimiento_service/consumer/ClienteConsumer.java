@@ -1,15 +1,29 @@
 package com.example.cuentaMovimiento_service.consumer;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Service;
+import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.stereotype.Component;
 
-@Service
+import com.example.cuentaMovimiento_service.dto.ClienteDTO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Component
 public class ClienteConsumer {
 
-    @RabbitListener(queues = "cliente-queue")
-    public void recibirClienteCreado(ClienteDTO clienteDTO) {
-        System.out.println("Cliente creado recibido con ID: " + clienteDTO.getClienteId() + " y nombre: " + clienteDTO.getNombre());
-        // Procesar el cliente recibido
-    }
+	@RabbitListener(queues = { "${cliente-queue.name}" })
+	public void receive(@Payload ClienteDTO message) {
+		log.info("Mensaje recibido con: '{}'", message);
+		makeSlow();
+	}
 
+	private void makeSlow() {
+		try {
+			Thread.sleep(15000);
+		} catch (InterruptedException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
 }
